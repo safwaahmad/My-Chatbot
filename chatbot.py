@@ -7,7 +7,7 @@ hf_token = os.getenv('HF_Token')
 
 # Initialize the HuggingFace model
 repo_id = "gpt2"  # Make sure this is the correct repository ID
- llm = HuggingFaceHub(repo_id=repo_id, huggingfacehub_api_token=HF_Token, model_kwargs={"max_length": 128, "temperature": 0.7})
+llm = HuggingFaceHub(repo_id=repo_id, huggingfacehub_api_token=HF_Token, model_kwargs={"max_length": 128, "temperature": 0.7})
 # llm = HuggingFaceHub(repo_id="your-repo-id", 
 #                      huggingfacehub_api_token="your-hf-token", 
 #                      model_kwargs={"max_length": 128, "temperature": 0.7})
