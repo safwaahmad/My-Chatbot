@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain import HuggingFaceHub
+from langchain.llms import HuggingFaceHub
 import os
 
 # # Replace with your actual Hugging Face token
@@ -14,7 +14,7 @@ import os
 repo_id = "gpt2"  # Make sure this is the correct repository ID
 
 # Initialize the HuggingFaceHub object
-llm = HuggingFaceHub(
+llms = HuggingFaceHub(
     repo_id=repo_id,
     huggingfacehub_api_token=HF_Token,
     model_kwargs={"max_length": 128, "temperature": 0.7})
