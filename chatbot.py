@@ -14,7 +14,7 @@ repo_id = "gpt2"  # Make sure this is the correct repository ID
 # Streamlit interface
 st.title("Chat with GPT-2")
 st.write("This chatbot is powered by a GPT-2 model hosted on Hugging Face.")
-
+st.write("Developed by Safwan Ahmad Saffi")
 user_input = st.text_input("You:", "Type your message here...")
 
 if st.button("Send"):
