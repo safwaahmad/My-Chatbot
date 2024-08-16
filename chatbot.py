@@ -52,6 +52,7 @@ llm = HuggingFaceHub(
 
 # Streamlit interface
 st.title("Chat with GPT-2")
+st.write("Developed by Safwan Ahmad Saffi")
 st.write("This chatbot is powered by a GPT-2 model hosted on Hugging Face.")
 
 user_input = st.text_input("You:", "Type your message here...")
