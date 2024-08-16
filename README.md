@@ -6,6 +6,5 @@ Network URL: http://192.168.10.2:8506
 
 <br
 The chatbot: 
-'''chatbot-gpt-2.streamlit.app/'''
  ```python
 https://chatbot-gpt-2.streamlit.app/    ```
