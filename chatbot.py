@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain import HuggingFaceHub
+from langchain.llms import HuggingFaceHub
 import os
 
 # Replace with your actual Hugging Face token
