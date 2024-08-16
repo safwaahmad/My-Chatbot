@@ -1,16 +1,23 @@
 import streamlit as st
-from langchain.llms import HuggingFaceHub
+from langchain import HuggingFaceHub
 import os
 
-# Replace with your actual Hugging Face token
-hf_token = os.getenv('HF_Token')
+# # Replace with your actual Hugging Face token
+# hf_token = os.getenv('HF_Token')
 
-# Initialize the HuggingFace model
+# # Initialize the HuggingFace model
+# repo_id = "gpt2"  # Make sure this is the correct repository ID
+# llm = HuggingFaceHub(repo_id=repo_id, huggingfacehub_api_token=HF_Token, model_kwargs={"max_length": 128, "temperature": 0.7})
+# llm = HuggingFaceHub(repo_id="gpt2", 
+#                        huggingfacehub_api_token="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", 
+#                        model_kwargs={"max_length": 128, "temperature": 0.7})
 repo_id = "gpt2"  # Make sure this is the correct repository ID
-llm = HuggingFaceHub(repo_id=repo_id, huggingfacehub_api_token=HF_Token, model_kwargs={"max_length": 128, "temperature": 0.7})
-# llm = HuggingFaceHub(repo_id="your-repo-id", 
-#                      huggingfacehub_api_token="your-hf-token", 
-#                      model_kwargs={"max_length": 128, "temperature": 0.7})
+
+# Initialize the HuggingFaceHub object
+llm = HuggingFaceHub(
+    repo_id=repo_id,
+    huggingfacehub_api_token=HF_Token,
+    model_kwargs={"max_length": 128, "temperature": 0.7})
 # Streamlit interface
 st.title("Chat with GPT-2")
 st.write("This chatbot is powered by a GPT-2 model hosted on Hugging Face.")
